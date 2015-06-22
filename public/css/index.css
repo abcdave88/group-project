@@ -1,20 +1,9 @@
-html, body {
+html, body, #map-canvas {
   height: 100%;
   margin: 0px;
   padding: 0px
 }
 
-// #map-canva {
-//   background-color: pink;
-//   height: 50px;
-//   width: 50px;
-// }
-
-.pink {
-  background-color: pink;
-  height: 50px;
-  width: 50px;
-}
 
 #panel {
   position: absolute;
