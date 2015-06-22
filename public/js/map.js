@@ -15,7 +15,7 @@ function codeAddress() {
   var address = document.getElementById('address').value;
   geocoder.geocode( { 'address': address}, function(results, status) {
     console.log(results)
-    var place = results[0].formatted_address
+   place = results[0].formatted_address
     storeLocation(place);
     if (status == google.maps.GeocoderStatus.OK) {
       map.setCenter(results[0].geometry.location);
@@ -34,7 +34,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 function storeLocation(place){
-// console.log(place)
+console.log(place)
   $.post('/places', place)
     .done(function(response){
       // console.log(response)
