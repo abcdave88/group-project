@@ -49,6 +49,12 @@ html, body, #map-canvas {
   border: none;
   border-bottom: 1px solid white;
   color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 100;
+  width: 80%;
+  outline: none;
+  margin-bottom: 10%;
 }
 
 #top-three {
@@ -68,7 +74,7 @@ html, body, #map-canvas {
   outline: none;
 }
 
-#top-three h3 {
+#left-pop-out h3 {
   color: white;
   font-size: 13px;
   font-family: 'Roboto', sans-serif;
