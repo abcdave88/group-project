@@ -1,4 +1,7 @@
- 
+.button-contain {
+  z-index: 1;
+  border: 1px solid red;
+}
 
 .trigger-button {
   position: absolute;
@@ -40,7 +43,7 @@
 }
 
 .line2{
-   position: relative;
+  position: relative;
   height: 7%;
   width: 65%;
   border-radius: 5px;
