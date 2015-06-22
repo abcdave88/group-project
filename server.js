@@ -1,5 +1,7 @@
 console.log('Oh hey guuurl!¡!¡!')
 
+
+
 var express = require('express');
 var app = express();
 var path = require('path');
@@ -24,10 +26,19 @@ app.get('/', function(req, res){
   res.render('index');
 })
 
+app.get('/places', function(req, res){
+  db.Location.find({}, function(err, places){
+    res.send(place)
+  });
+})
+
 app.post('/places', function(req,res){
   db.Location.create(req.body, function(err, place){
+   console.log(place)
     res.send(201, place);
-    // console.log(req.body)
+    user.locations.push(place);
+    user.save()
+   
   });
 
 });

@@ -36,8 +36,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 function storeLocation(place){
 console.log(place)
   $.post('/places', place)
-    .done(function(response){
-      // console.log(response)
+    .done(function(place){
+      console.log(place)
     })
   
 }
