@@ -1,15 +1,51 @@
- html, body, #map-canvas {
-        height: 100%;
-        margin: 0px;
-        padding: 0px
-      }
-      #panel {
-        position: absolute;
-        top: 5px;
-        left: 50%;
-        margin-left: -180px;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
-      }
+html, body, #map-canvas {
+  height: 100%;
+  margin: 0px;
+  padding: 0px
+}
+
+#panel {
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 5%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+#side-nav-bar {
+  width: 5.5%;
+  height: 800px;
+  background-color: rgba(100, 100, 100, 0.9);
+  position: absolute;
+  right: 0px;
+  /*float: right;*/
+  z-index: 3;
+  text-align: center;
+}
+
+#left-pop-out {
+  width: 20%;
+  height: 800px;
+  background-color: rgba(100, 100, 100, 0.9);
+  position: absolute;
+  float: left;
+  z-index: 3;
+  text-align: center;
+}
+
+h4 {
+  color: white;
+  font-size: 10%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.fa {
+  color: white;
+}
+
+.nav-hr {
+  width: 20%;
+}
