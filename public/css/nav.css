@@ -1,4 +1,4 @@
-  
+
 
 .trigger-button {
   z-index: 1;
@@ -41,7 +41,7 @@
 }
 
 .line2{
-   position: relative;
+  position: relative;
   height: 7%;
   width: 65%;
   border-radius: 5px;
