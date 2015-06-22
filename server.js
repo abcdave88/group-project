@@ -13,6 +13,13 @@ var db = require ('./models')
 app.set('views','./views');
 app.set('view engine', 'ejs');
 
+app.use(sass.middleware({
+src: __dirname + '/sass',
+dest: __dirname + '/public',
+debug: true,
+outputStyle: 'compressed'
+}));
+
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
