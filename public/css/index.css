@@ -9,9 +9,7 @@ html, body, #map-canvas {
   margin-top: 5%;
   margin-left: 5%;
   z-index: 5;
-  background-color: #fff;
   padding: 5px;
-  border: 1px solid #999;
 }
 
 #side-nav-bar {
@@ -34,6 +32,37 @@ html, body, #map-canvas {
   float: left;
   z-index: 3;
   text-align: center;
+  visibility: hidden;
+}
+
+#add-trip-button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  display: block;
+  letter-spacing: 2px;
+}
+
+.new-trip-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+#top-three {
+  margin-top: 30%;
+}
+
+h3 {
+  color: white;
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  margin: 0 0;
 }
 
 h4 {
@@ -50,11 +79,12 @@ h4 {
 }
 
 .nav-hr {
-  width: 50%;
+  width: 55%;
 }
 
 .menu-item {
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #login-div {
