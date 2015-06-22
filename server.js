@@ -24,6 +24,14 @@ app.get('/', function(req, res){
   res.render('index');
 })
 
+app.post('/places', function(req,res){
+  db.Location.create(req.body, function(err, place){
+    res.send(201, place);
+    // console.log(req.body)
+  });
+
+});
+
 server.listen(port, function(){
   console.log("Server started on http://localhost:" + port);
 })

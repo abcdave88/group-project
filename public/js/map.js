@@ -1,5 +1,6 @@
 var geocoder;
 var map;
+
 function initialize() {
   geocoder = new google.maps.Geocoder();
   var latlng = new google.maps.LatLng(-34.397, 150.644);
@@ -13,14 +14,15 @@ function initialize() {
 function codeAddress() {
   var address = document.getElementById('address').value;
   geocoder.geocode( { 'address': address}, function(results, status) {
-    console.log(results, status);
+    console.log(results)
+    var place = results[0].formatted_address
+    storeLocation(place);
     if (status == google.maps.GeocoderStatus.OK) {
       map.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
           map: map,
           position: results[0].geometry.location
-      });
-      storeLocation();
+      });    
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     }
@@ -31,7 +33,11 @@ function codeAddress() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 
-function storeLocation(){
-  
+function storeLocation(place){
+// console.log(place)
+  $.post('/places', place)
+    .done(function(response){
+      // console.log(response)
+    })
   
 }
