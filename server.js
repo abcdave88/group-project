@@ -28,16 +28,16 @@ app.get('/', function(req, res){
 
 app.get('/places', function(req, res){
   db.Location.find({}, function(err, places){
-    res.send(place)
+    res.send(places)
   });
 })
 
 app.post('/places', function(req,res){
   db.Location.create(req.body, function(err, place){
-   console.log(place)
+   // console.log(place)
     res.send(201, place);
-    user.locations.push(place);
-    user.save()
+    // user.locations.push(place);
+    // user.save()
    
   });
 
