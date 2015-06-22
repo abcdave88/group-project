@@ -1,6 +1,5 @@
 var geocoder;
 var map;
-var results;
 function initialize() {
   geocoder = new google.maps.Geocoder();
   var latlng = new google.maps.LatLng(-34.397, 150.644);
@@ -21,6 +20,7 @@ function codeAddress() {
           map: map,
           position: results[0].geometry.location
       });
+      storeLocation();
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     }
@@ -29,3 +29,8 @@ function codeAddress() {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
+
+function storeLocation(){
+  
+}
