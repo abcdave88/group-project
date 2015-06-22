@@ -1,5 +1,6 @@
 var geocoder;
 var map;
+var results;
 function initialize() {
   geocoder = new google.maps.Geocoder();
   var latlng = new google.maps.LatLng(-34.397, 150.644);
@@ -13,6 +14,7 @@ function initialize() {
 function codeAddress() {
   var address = document.getElementById('address').value;
   geocoder.geocode( { 'address': address}, function(results, status) {
+    console.log(results, status);
     if (status == google.maps.GeocoderStatus.OK) {
       map.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
@@ -22,6 +24,7 @@ function codeAddress() {
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     }
+
   });
 }
 
