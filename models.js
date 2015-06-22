@@ -25,7 +25,7 @@ var UserSchema = new Schema ({
   name: String,
   user_name: String,
   email: String,
-  Locations: [LocationSchema]
+  locations: [LocationSchema]
 });
 
 var User = mongoose.model('User', UserSchema);
