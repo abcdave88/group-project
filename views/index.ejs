@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>The Three Things I Did</title>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.9.2/sass.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <link rel="stylesheet" type="text/css" href="./css/nav.css">
@@ -11,6 +11,7 @@
     <script type="text/javascript" src="js/map.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.css">
     <script type="text/javascript" src="js/clickevents.js"></script>
+    <script type="text/javascript" src="js/autocomplete.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,700italic,500italic,500,400italic,300italic,300,100,100italic,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
@@ -54,7 +55,6 @@
       <i class="fa fa-pencil fa-lg"></i>
       <h4>contact us</h4>
     </div>
-    <hr class="nav-hr">
 
     <div id="login-div">
       <h4>SIGN UP OR</h4>
@@ -70,10 +70,14 @@
         <input class="new-trip-input" type="textbox" placeholder="how long were you there?">
         <div id="top-three">
           <h3>Enter your three favourite things you did while there</h3>
-            <input class="favourite-things" type="textbox" placeholder="1">
-            <input class="favourite-things" type="textbox" placeholder="2">
-            <input class="favourite-things" type="textbox" placeholder="3">
-            <button id="add-trip-button">ADD TRIP</button>
+          <input id="pac-input" class="controls" type="text" placeholder="1.">
+          <input id="pac-input2" class="controls" type="text" placeholder="2.">
+          <input id="pac-input3" class="controls" type="text" placeholder="3.">
+          <div id="type-selector" class="controls">
+           <button id="add-trip-button">ADD TRIP</button>
+        </div>
+
+
         </div> <!-- this closes the top-three div -->
       </div> <!-- this closes the panel div -->
     </div> <!-- this closes the left-pop-out -->
