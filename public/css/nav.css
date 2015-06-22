@@ -1,6 +1,7 @@
- 
+  
 
 .trigger-button {
+  z-index: 1;
   position: absolute;
   height: 70px;
   width: 70px;

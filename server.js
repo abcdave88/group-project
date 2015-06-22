@@ -10,7 +10,7 @@ var port = process.env.PORT || 3000;
 var bodyParser = require('body-parser')
 var morgan = require('morgan');
 var mongoose = require('mongoose')
-var db = require ('./models')
+var db = require('./models')
 
 app.set('views','./views');
 app.set('view engine', 'ejs');
