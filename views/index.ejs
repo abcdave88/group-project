@@ -63,6 +63,7 @@
     <h4 class="sign-up-link">SIGN UP</h4>
     <h4>OR</h4>
     <h4 class="login-link">LOG IN</h4>
+    <br>
 
     <a href="/logout" class="btn btn-default btn-sm">Logout</a>
 
@@ -76,17 +77,28 @@
          <!--  <input name class="add-pin" type="button" value="add pin"> -->
           <input name="date" class="new-trip-input" type="textbox" placeholder="date visited">
           <input name="stay" class="new-trip-input" type="textbox" placeholder="how long were you there?">
-          <button>submit</button>
-        </form>
-        <div id="top-three">
-          <h3>Enter your three favourite things you did while there</h3>
-          <input id="pac-input1" class="controls" type="text" placeholder="1.">
-          <input id="pac-input2" class="controls" type="text" placeholder="2.">
-          <input id="pac-input3" class="controls" type="text" placeholder="3.">
+          <div id="top-three">
+            <h3>Enter your three favourite things you did while there</h3>
+            <input name="top1" id="pac-input1" class="controls" type="text" placeholder="1.">
+            <input name="top2" id="pac-input2" class="controls" type="text" placeholder="2.">
+            <input name="top3" id="pac-input3" class="controls" type="text" placeholder="3.">
           <div id="type-selector" class="controls">
            <button id="add-trip-button">ADD TRIP</button>
         </div>
-          </div> <!-- this closes the top-three div -->
+          </div> 
+          <button>submit</button>
+        </form>
+
+              <!--   <div id="top-three">
+                  <h3>Enter your three favourite things you did while there</h3>
+                  <input id="pac-input1" class="controls" type="text" placeholder="1.">
+                  <input id="pac-input2" class="controls" type="text" placeholder="2.">
+                  <input id="pac-input3" class="controls" type="text" placeholder="3.">
+                  <div id="type-selector" class="controls">
+                   <button id="add-trip-button">ADD TRIP</button>
+                </div>
+                  </div> --> 
+                  
         </div> <!-- this closes the panel div -->
       </div> <!-- this closes the left-pop-out -->
 
@@ -103,7 +115,7 @@
            <input type="password" class="form-control" name="password">
         </div>
 
-       <button type="submit" class="btn btn-warning btn-lg">Login</button>
+       <button type="submit" id="login-up-button" class="btn btn-warning btn-lg">Login</button>
         </form>
       </div>
 
@@ -118,7 +130,7 @@
           <label>Password</label>
           <input type="password" class="form-control" name="password">
         </div>
-          <button type="submit" class="btn btn-warning btn-lg">Signup</button>
+          <button type="submit" id="sign-up-button" class="btn btn-warning btn-lg">Signup</button>
         </form>
       </div>
 
