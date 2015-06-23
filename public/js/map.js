@@ -34,6 +34,7 @@ function codeAddress(locationData) {
       map.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
           map: map,
+          icon: "./assets/images/tree.png",
           position: results[0].geometry.location
       }); 
       storeLocation(place, date, stay)   
