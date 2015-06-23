@@ -17,6 +17,7 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var LocalStrategy = require('passport-local').Strategy;
 
+require('./public/js/passport.js')(passport);
 
 app.set('views','./views');
 app.set('view engine', 'ejs');
@@ -32,6 +33,19 @@ app.use(session({ secret: 'SECRET' }));
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+function isLoggedIn(req, res, next) {
+
+   // if user is authenticated in the session, carry on 
+   if (req.isAuthenticated())
+       return next();
+
+   // if they aren't redirect them to the home page
+   res.redirect('/');
+}
+
+
+
 app.get('/', function(req, res){
   res.render('index');
 })
@@ -43,6 +57,10 @@ app.get('/login', function(req, res) {
 app.get('/signup', function(req, res) {
   res.render('signup.ejs'); 
 });
+
+app.post('/signup', passport.authenticate('local-signup', {
+       successRedirect : '/'
+   }));
 
 app.get('/places', function(req, res){
   db.Location.find({}, function(err, places){

@@ -8,18 +8,10 @@ var User = require('../../models.js').User;
 
 module.exports = function(passport) {
 
-   // =========================================================================
-   // passport session setup ==================================================
-   // =========================================================================
-   // required for persistent login sessions
-   // passport needs ability to serialize and unserialize users out of session
-
-   // used to serialize the user for the session
    passport.serializeUser(function(user, done) {
        done(null, user.id);
    });
 
-   // used to deserialize the user
    passport.deserializeUser(function(id, done) {
        User.findById(id, function(err, user) {
            done(err, user);
@@ -46,7 +38,7 @@ module.exports = function(passport) {
 
        // find a user whose email is the same as the forms email
        // we are checking to see if the user trying to login already exists
-       User.findOne({ 'local.email' :  email }, function(err, user) {
+       User.findOne({ 'email' :  email }, function(err, user) {
            // if there are any errors, return the error
            if (err)
                return done(err);
@@ -58,11 +50,11 @@ module.exports = function(passport) {
 
                // if there is no user with that email
                // create the user
-               var newUser            = new User();
+               var newUser = new User();
 
                // set the user's local credentials
-               newUser.local.email    = email;
-               newUser.local.password = newUser.generateHash(password);
+               newUser.email = email;
+               newUser.password = newUser.generateHash(password);
 
                // save the user
                newUser.save(function(err) {
@@ -79,4 +71,3 @@ module.exports = function(passport) {
    }));
 
 };
-Files

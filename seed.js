@@ -10,7 +10,7 @@ db.ThreeThings.collection.remove();
 
 db.User.create({
   name: 'User One',
-  user_name: 'UzeeeerOne',
+  username: 'UzeeeerOne',
   email: 'userone@test.com'
 }, function(err, user){
   console.log('user created');
