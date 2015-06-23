@@ -39,9 +39,11 @@ html, body, #map-canvas {
   background-color: rgba(100, 100, 100, 0.9);
   position: absolute;
   float: left;
-  z-index: 3;
+  z-index: 2;
   text-align: center;
   display: none;
+  padding-top: 5%;
+  color: white;
 }
 
 #add-trip-button {

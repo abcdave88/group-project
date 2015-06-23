@@ -23,7 +23,8 @@ var Location = mongoose.model('Location', LocationSchema);
 
 var UserSchema = new Schema ({
   name: String,
-  user_name: String,
+  username: String,
+  password: String,
   email: String,
   locations: [LocationSchema]
 });
