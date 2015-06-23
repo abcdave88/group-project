@@ -11,16 +11,12 @@ html, body, #map-canvas {
   padding: 5px;
 }
 
-#side-nav-bar {
+.side-nav-bar {
   width: 5.5%;
   height: 800px;
   background-color: rgba(90, 90, 90, 0.9);
   position: absolute;
   right: 0px;
-<<<<<<< HEAD
-/*  float: right;*/
-=======
->>>>>>> b44fd9f29e37b98df48d09663f7308f2a03a8ede
   z-index: 3;
   text-align: center;
   padding-top: 2%;
