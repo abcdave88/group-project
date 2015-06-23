@@ -64,10 +64,13 @@
     <div id="left-pop-out">
       <div id="panel">
       	<h3>Trip Details</h3>
-        <input id="address" type="textbox" value="Sydney, NSW">
-        <input type="button" value="add pin" onclick="codeAddress()">
-        <input class="new-trip-input" type="textbox" placeholder="date visited">
-        <input class="new-trip-input" type="textbox" placeholder="how long were you there?">
+        <form class="addLocation">
+          <input name="address" id="address" type="textbox">
+         <!--  <input name class="add-pin" type="button" value="add pin"> -->
+          <input name="date" class="new-trip-input" type="textbox" placeholder="date visited">
+          <input name="stay" class="new-trip-input" type="textbox" placeholder="how long were you there?">
+          <button>submit</button>
+        </form>
         <div id="top-three">
           <h3>Enter your three favourite things you did while there</h3>
           <input id="pac-input" class="controls" type="text" placeholder="1.">
