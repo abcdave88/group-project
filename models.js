@@ -5,9 +5,9 @@ mongoose.connect('mongodb://localhost/threethingsdatabase');
 var Schema = mongoose.Schema;
 
 var ThreeThingsSchema = new Schema({
-  one: [],
-  two: [],
-  three: []
+  text: String,
+  lat: String,
+  lng: String
 })
 
 var ThreeThings = mongoose.model('ThreeThings', ThreeThingsSchema);

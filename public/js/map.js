@@ -21,9 +21,9 @@ function storeLocation(place, date, stay, top1, top2, top3){
   var top2 = top2.split(", ")[0]
   var top3 = top3.split(", ")[0]
 console.log(place, date, stay, top1, top2, top3, 'anne')
-  $.post('/places', {country: country, city: city, date_of_visit: date, duration_of_visit: stay })
+  $.post('/places', {location: {city: city, country: country, date_of_visit: date, duration_of_visit: stay}, three_things: {one: top1, two: top2, three: top3 }})
     .done(function(place){
-      //AJAX request to create a new city
+      console.log(place);
     })
 }
 
