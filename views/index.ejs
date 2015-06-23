@@ -58,9 +58,11 @@
       <h4>contact us</h4>
     </div>
 
-    <a href="/logout" class="btn btn-default btn-sm">Logout</a>
-    <h4 class="login-link">SIGN UP OR</h4>
+    <h4 class="sign-up-link">SIGN UP</h4>
+    <h4>OR</h4>
     <h4 class="login-link">LOG IN</h4>
+
+    <a href="/logout" class="btn btn-default btn-sm">Logout</a>
 
   </div>
 
@@ -87,19 +89,35 @@
       </div> <!-- this closes the left-pop-out -->
 
       <div id="login-pop-out">
+        <h1>login page</h1>
+
         <form action="/login" method="post">
-         <div>
-          <label>Username:</label>
-          <input type="text" name="username"/>
-          </div>
-          <div>
-          <label>Password:</label>
-          <input type="password" name="password"/>
+        <div class="form-group">
+           <label>Email</label>
+           <input type="text" class="form-control" name="email">
         </div>
-        <div>
-          <input type="submit" value="Log In"/>
+        <div class="form-group">
+           <label>Password</label>
+           <input type="password" class="form-control" name="password">
         </div>
-      </form>
+
+       <button type="submit" class="btn btn-warning btn-lg">Login</button>
+        </form>
+      </div>
+
+      <div id="sign-up-pop-out">
+        <h1>signup page</h1>
+          <form action="/signup" method="post">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="text" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" name="password">
+        </div>
+          <button type="submit" class="btn btn-warning btn-lg">Signup</button>
+        </form>
       </div>
 
     </div>

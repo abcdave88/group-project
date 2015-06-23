@@ -44,7 +44,18 @@ html, body, #map-canvas {
   text-align: center;
   display: none;
   padding-top: 5%;
-  color: white;
+}
+
+#sign-up-pop-out {
+  width: 20%;
+  height: 800px;
+  background-color: rgba(100, 100, 100, 0.9);
+  position: absolute;
+  float: left;
+  z-index: 2;
+  text-align: center;
+  display: none;
+  padding-top: 5%;
 }
 
 #add-trip-button {

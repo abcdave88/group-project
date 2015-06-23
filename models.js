@@ -17,6 +17,7 @@ var LocationSchema = new Schema ({
   city: String,
   date_of_visit: String,
   duration_of_visit: String,
+  latLong: String,
   three_things: [ThreeThingsSchema]
 });
 
