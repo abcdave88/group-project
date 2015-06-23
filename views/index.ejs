@@ -32,7 +32,7 @@
   </div>
   <!-- Menu Button -->
 
-  <div class="side-nav-bar">
+  <div id="side-nav-bar">
     <div class="menu-item">
       <i class="fa fa-plus fa-lg"></i>
       <h4>add a trip</h4>
@@ -58,8 +58,8 @@
       <h4>contact us</h4>
     </div>
 
-    <h4>SIGN UP OR</h4>
-    <h4>LOG IN<h4>
+    <h4 class="login-link">SIGN UP OR</h4>
+    <h4 class="login-link">LOG IN</h4>
 
   </div>
 
@@ -81,6 +81,7 @@
           <div id="type-selector" class="controls">
            <button id="add-trip-button">ADD TRIP</button>
         </div>
+      </div> <!-- this closes the left-pop-out -->
 
       <div id="login-pop-out">
         <form action="/login" method="post">
@@ -88,20 +89,22 @@
           <label>Username:</label>
           <input type="text" name="username"/>
           </div>
+          <div>
+          <label>Password:</label>
+          <input type="password" name="password"/>
+        </div>
         <div>
-        <label>Password:</label>
-        <input type="password" name="password"/>
-     </div>
-     <div>
-       <input type="submit" value="Log In"/>
-   </div>
-</form>
+          <input type="submit" value="Log In"/>
+        </div>
+      </form>
+      </div>
 
 
 
         </div> <!-- this closes the top-three div -->
       </div> <!-- this closes the panel div -->
-    </div> <!-- this closes the left-pop-out -->
+    </div>
     <div id="map-canvas"></div>
+
   </body>
 </html>
