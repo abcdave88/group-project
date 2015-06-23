@@ -13,15 +13,21 @@ function initialize() {
   autocomplete.bindTo('bounds', map);
 
   var infowindow = new google.maps.InfoWindow();
+  //needs to ba a array of markers
   var marker = new google.maps.Marker({
     map: map,
-    anchorPoint: new google.maps.Point(0, -29)
+    //when commented out map size changes
+    anchorPoint: new google.maps.Point(0, -29) 
   });
 
   google.maps.event.addListener(autocomplete, 'place_changed', function() {
+    
     infowindow.close();
+    //
     marker.setVisible(false);
     var place = autocomplete.getPlace();
+    //this is the place
+    console.log(place.geometry.location);
     if (!place.geometry) {
       window.alert("Autocomplete's returned place contains no geometry");
       return;
@@ -45,6 +51,7 @@ function initialize() {
     marker.setVisible(true);
 
     var address = '';
+
     if (place.address_components) {
       address = [
         (place.address_components[0] && place.address_components[0].short_name || ''),
@@ -65,7 +72,7 @@ function initialize() {
       autocomplete.setTypes(types);
     });
   }
-
+///tap will on click show options
   setupClickListener('changetype-all', []);
   setupClickListener('changetype-address', ['address']);
   setupClickListener('changetype-establishment', ['establishment']);
