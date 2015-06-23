@@ -7,6 +7,12 @@ function addTrip() {
 	// $('#left-pop-out').addClass('animated slideOutLeft');
 }
 
+function loginMenu() {
+	console.log('loginMenu');
+	$("#login-pop-out").toggle();
+	$("#login-pop-out").addClass('animated slideInLeft');
+}
+
 function contactMenu() {
 	console.log('contactMenu');
 }
@@ -14,5 +20,7 @@ function contactMenu() {
 $('.fa-plus').on('click', addTrip);
 
 $('.fa-pencil').on('click', contactMenu);
+
+$('.login-link').on('click', loginMenu);
 
 });
