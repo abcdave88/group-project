@@ -25,9 +25,9 @@ db.User.create({
     console.log('location created');
     console.log(location);
     db.ThreeThings.create({
-      one: 'test1',
-      two: 'test2',
-      three: 'test3'
+      text: 'test1',
+      lat: '2343454',
+      lng: '133435'
     }, function(err, threeThings){
       console.log('things created');
       console.log(threeThings);

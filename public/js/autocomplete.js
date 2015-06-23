@@ -32,19 +32,7 @@ function updateMapBounds(autocomplete){
       map: map,
       title: 'Hello World!'
     });
-    // marker.setVisible(true);
-
-    // var address = '';
-    // if (place.address_components) {
-    //   address = [
-    //     (place.address_components[0] && place.address_components[0].short_name || ''),
-    //     (place.address_components[1] && place.address_components[1].short_name || ''),
-    //     (place.address_components[2] && place.address_components[2].short_name || '')
-    //   ].join(' ');
-    // }
-
-    // infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
-    // infowindow.open(map, marker);
+  
   });
 }
 
@@ -63,27 +51,7 @@ function initialize() {
   setAutocomplete();
   console.log(map);
 
-  // var infowindow = new google.maps.InfoWindow();
-  // //needs to ba a array of markers
-  // var marker = new google.maps.Marker({
-  //   map: map,
-  //   //when commented out map size changes
-  //   position: latlng
-  // });
-
-  // Sets a listener on a radio button to change the filter type on Places
-  // Autocomplete.
-  // function setupClickListener(id, types) {
-  //   var radioButton = document.getElementById(id);
-  //   google.maps.event.addDomListener(radioButton, 'click', function() {
-  //     autocomplete.setTypes(types);
-  //   });
-  // }
-///tap will on click show options
-  // setupClickListener('changetype-all', []);
-  // setupClickListener('changetype-address', ['address']);
-  // setupClickListener('changetype-establishment', ['establishment']);
-  // setupClickListener('changetype-geocode', ['geocode']);
+ 
 }
 
 $(document).ready(function(){
