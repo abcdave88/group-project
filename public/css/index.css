@@ -1,5 +1,6 @@
 html, body, #map-canvas {
   height: 100%;
+  max-width: 98.2%;
   margin: 0px;
   padding: 0px
 }

@@ -62,6 +62,19 @@ app.post('/signup', passport.authenticate('local-signup', {
        successRedirect : '/'
    }));
 
+
+app.post('/login', passport.authenticate('local-login', {
+        successRedirect : '/',
+        failureRedirect : '/login'
+    }));
+
+
+app.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/login');
+});
+
+
 app.get('/places', function(req, res){
   db.Location.find({}, function(err, places){
     res.send(places)
@@ -77,7 +90,6 @@ app.post('/places', function(req,res){
     // user.save()
    
   });
-
 });
 
 server.listen(port, function(){

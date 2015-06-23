@@ -11,6 +11,7 @@ db.ThreeThings.collection.remove();
 db.User.create({
   name: 'User One',
   username: 'UzeeeerOne',
+  password: 'password',
   email: 'userone@test.com'
 }, function(err, user){
   console.log('user created');
