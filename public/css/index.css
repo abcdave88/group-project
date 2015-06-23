@@ -107,6 +107,19 @@ html, body, #map-canvas {
   margin: 0 0 10% 0;
 }
 
+.form-control {
+  display: block;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 2px;
+}
+
 h4 {
   color: white;
   font-size: 10%;

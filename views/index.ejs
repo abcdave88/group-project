@@ -101,7 +101,7 @@
       </div> <!-- this closes the left-pop-out -->
 
       <div id="login-pop-out">
-        <h1>login page</h1>
+        <h2>LOGIN</h2>
 
         <form action="/login" method="post">
         <div class="form-group">
@@ -118,9 +118,13 @@
       </div>
 
       <div id="sign-up-pop-out">
-        <h1>signup page</h1>
+        <h2>SIGN UP</h2>
           <form action="/signup" method="post">
         <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-control" name="name">
+          <label>Username</label>
+          <input type="text" class="form-control" name="username">
           <label>Email</label>
           <input type="text" class="form-control" name="email">
         </div>
@@ -131,6 +135,7 @@
           <button type="submit" id="sign-up-button" class="btn btn-warning btn-lg">Signup</button>
         </form>
       </div>
+
 
     </div>
     <div id="map-canvas"></div>
