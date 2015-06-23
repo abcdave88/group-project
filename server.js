@@ -50,17 +50,31 @@ app.get('/', function(req, res){
   res.render('index');
 })
 
-app.get('/login', function(req, res) {
-  res.render('login.ejs'); 
-});
+// app.get('/login', function(req, res) {
+//   res.render('login.ejs'); 
+// });
 
-app.get('/signup', function(req, res) {
-  res.render('signup.ejs'); 
-});
+// app.get('/signup', function(req, res) {
+//   res.render('signup.ejs'); 
+// });
+
 
 app.post('/signup', passport.authenticate('local-signup', {
        successRedirect : '/'
    }));
+
+
+app.post('/login', passport.authenticate('local-login', {
+        successRedirect : '/',
+        failureRedirect : '/login'
+    }));
+
+
+app.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/login');
+});
+
 
 app.get('/places', function(req, res){
   db.Location.find({}, function(err, places){
@@ -77,7 +91,6 @@ app.post('/places', function(req,res){
     // user.save()
    
   });
-
 });
 
 server.listen(port, function(){
