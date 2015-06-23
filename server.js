@@ -33,8 +33,9 @@ app.get('/places', function(req, res){
 })
 
 app.post('/places', function(req,res){
+  console.log(req.body)
   db.Location.create(req.body, function(err, place){
-   // console.log(place)
+    console.log(place);
     res.send(201, place);
     // user.locations.push(place);
     // user.save()
