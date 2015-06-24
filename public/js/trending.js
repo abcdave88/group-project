@@ -32,8 +32,10 @@ var items = {};
      items[key] = value;
     }
     // console.log(items);
-    var sortedArray = sortProperties(items);
-    console.log(sortedArray);
+    var sorted = sortProperties(items);
+    var trending = sorted.reverse();
+    console.log(trending);
+    // debugger;
   }) 
 
 });//end of document.ready

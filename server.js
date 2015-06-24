@@ -75,14 +75,13 @@ app.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-///getting everything form the datavbase
+
 app.get('/places', function(req, res){
   db.Location.find({}, function(err, places){
     res.send(places)
   });
 })
 
-///posting in the database 
 app.post('/places', function(req,res){
   // console.log(req.body, req.body.three_things.one, req.body.three_things.two)
 
@@ -105,20 +104,6 @@ app.post('/places', function(req,res){
     });
   });
 });
-
-
-
-///testing ajax 
-app.get('/test', function(req,res){
-  db.Location.find({}, function(err, places){
-  res.send(places);
-  });
-})
-
-
-
-
-
 
 ///Trending////
   app.get('/trending', function(req, res){
