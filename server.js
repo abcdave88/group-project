@@ -83,20 +83,20 @@ app.get('/places', function(req, res){
 })
 
 app.post('/places', function(req,res){
-  console.log(req.body)
-  
+  // console.log(req.body, req.body.three_things.one, req.body.three_things.two)
+
   db.Location.create(req.body.location, function(err, location){
     console.log('location created');
-    db.ThreeThings.create({text: req.body.three_things.one}, function(err, topThree){
+    db.ThreeThings.create(req.body.three_things.one, function(err, topThree){
       location.three_things.push(topThree)
     })
 
-    db.ThreeThings.create({text: req.body.three_things.two}, function(err, topThree){
+    db.ThreeThings.create(req.body.three_things.two, function(err, topThree){
       console.log(topThree, 'second')
       location.three_things.push(topThree)
     })
 
-    db.ThreeThings.create({text: req.body.three_things.three}, function(err, topThree){
+    db.ThreeThings.create(req.body.three_things.three, function(err, topThree){
      console.log(topThree, 'third')
      location.three_things.push(topThree)
      location.save();

@@ -1,4 +1,4 @@
-//Define all variables
+
 var autocomplete;
 var infowindow = new google.maps.InfoWindow(); 
 var marker = new google.maps.Marker({
@@ -7,11 +7,16 @@ var marker = new google.maps.Marker({
 });
 
 function updateMapBounds(autocomplete){
+  //I am not sure if this is correct...!
+  // threeThingsLatLng = [];
   google.maps.event.addListener(autocomplete, 'place_changed', function(){
     infowindow.close();
     // marker.setVisible(false);
     var place = autocomplete.getPlace();
-    console.log(place, 'hello')
+    console.log(place)
+    var A = place.geometry.location.A
+    var F = place.geometry.location.F
+
     if (!place.geometry) {
       window.alert("Autocomplete's returned place contains no geometry");
       return;
@@ -26,6 +31,9 @@ function updateMapBounds(autocomplete){
     }
     var lat = place.geometry.location.lat();
     var lng = place.geometry.location.lng();
+    //Pushing into varibale in map.js file
+    threeThingsLatLng.push([lat, lng]);
+    console.log('threeThingsLatLng', threeThingsLatLng);
     var myLatlng = new google.maps.LatLng(lat, lng);
     var marker = new google.maps.Marker({
       position: myLatlng,

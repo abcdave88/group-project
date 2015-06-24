@@ -82,22 +82,12 @@
             <input name="top2" id="pac-input2" class="controls" type="text" placeholder="2.">
             <input name="top3" id="pac-input3" class="controls" type="text" placeholder="3.">
           <div id="type-selector" class="controls">
-           <button id="add-trip-button">ADD TRIP</button>
         </div>
           </div> 
-          <button>submit</button>
+          
         </form>
-
-              <!--   <div id="top-three">
-                  <h3>Enter your three favourite things you did while there</h3>
-                  <input id="pac-input1" class="controls" type="text" placeholder="1.">
-                  <input id="pac-input2" class="controls" type="text" placeholder="2.">
-                  <input id="pac-input3" class="controls" type="text" placeholder="3.">
-                  <div id="type-selector" class="controls">
-                   <button id="add-trip-button">ADD TRIP</button>
-                </div>
-                  </div> --> 
-                  
+        <!-- Taking the button outside form to stop autocomplete events firing submit -->
+        <button class="new-location">submit</button>           
         </div> <!-- this closes the panel div -->
       </div> <!-- this closes the left-pop-out -->
 
@@ -119,22 +109,22 @@
       </div>
 
       <div id="sign-up-pop-out">
-        <h2>SIGN UP</h2>
+        <h3>Create a new account</h3>
+        <hr class="sign-up-hr">
+        <p>Signing up with us will allow you to create your own personalized map, which you can track your personal travels through</p>
           <form action="/signup" method="post">
-        <div class="form-group">
-          <label>Name</label>
-          <input type="text" class="form-control" name="name">
-          <label>Username</label>
-          <input type="text" class="form-control" name="username">
-          <label>Email</label>
-          <input type="text" class="form-control" name="email">
-        </div>
-        <div class="form-group">
-          <label>Password</label>
-          <input type="password" class="form-control" name="password">
-        </div>
-          <button type="submit" id="sign-up-button" class="btn btn-warning btn-lg">Signup</button>
-        </form>
+            <div class="form-group">
+              <label class="registration-fields">NAME</label>
+              <input type="text" class="form-control" name="name">
+              <label class="registration-fields">USERNAME</label>
+              <input type="text" class="form-control" name="username">
+              <label class="registration-fields">EMAIL</label>
+              <input type="text" class="form-control" name="email">
+              <label class="registration-fields">PASSWORD</label>
+              </div>
+              <input type="password" class="form-control" name="password">
+              <button type="submit" id="sign-up-button" class="btn btn-warning btn-lg"><p>SIGN UP</p></button>
+          </form>
       </div>
 
 
