@@ -112,6 +112,7 @@ app.post('/places', function(req,res){
 app.get('/test', function(req,res){
   db.Location.find({}, function(err, places){
   res.send(places);
+  console.log(places)
   });
 })
 
