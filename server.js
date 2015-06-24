@@ -84,6 +84,7 @@ app.get('/places', function(req, res){
 
 app.post('/places', function(req,res){
   console.log(req.body)
+  
   db.Location.create(req.body.location, function(err, location){
     console.log('location created');
     db.ThreeThings.create({text: req.body.three_things.one}, function(err, topThree){

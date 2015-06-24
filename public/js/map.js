@@ -58,14 +58,14 @@ function codeAddress(locationData) {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 $(document).ready(function(){
+//stores data for create new data
   $(".addLocation").on('submit', function(e){
     e.preventDefault()
     var locationData = $(this).serializeArray()
-    console.log(locationData)
+    // console.log(locationData)
     var mapsData = codeAddress(locationData)
-   // console.log(mapsData)
-    console.log("hello")
   });
+
 });
 
 
