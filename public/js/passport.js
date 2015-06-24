@@ -19,9 +19,9 @@ module.exports = function(passport) {
        });
    });
 
-   // =========================================================================
-   // LOCAL SIGNUP ============================================================
-   // =========================================================================
+
+   // LOCAL SIGNUP =====================
+  
    // we are using named strategies since we have one for login and one for signup
    // by default, if there was no name, it would just be called 'local'
 
@@ -54,8 +54,10 @@ module.exports = function(passport) {
                var newUser = new User();
 
                // set the user's local credentials
+               newUser.name = req.body.name;
                newUser.email = email;
                newUser.password = newUser.generateHash(password);
+               console.log(req, 'request object');
 
                // save the user
                newUser.save(function(err) {
