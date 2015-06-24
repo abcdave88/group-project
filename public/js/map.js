@@ -58,6 +58,7 @@ function codeAddress(locationData) {
       var marker = new google.maps.Marker({
           icon: "./assets/images/red-marker.png",
           map: map,
+          animation: google.maps.Animation.DROP,
           position: results[0].geometry.location
       }); 
       ///passes thru 3 data for ajax request
