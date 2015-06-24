@@ -27,7 +27,7 @@ function updateMapBounds(autocomplete){
       map.fitBounds(place.geometry.viewport);
     } else {
       map.setCenter(place.geometry.location);
-      map.setZoom(17);  // Why 17? Because it looks good.
+      // map.setZoom(2);  // Why 17? Because it looks good.
     }
     var lat = place.geometry.location.lat();
     var lng = place.geometry.location.lng();
