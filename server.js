@@ -65,7 +65,7 @@ app.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-///getting everything form the datavbase
+
 app.get('/places', function(req, res){
   db.Location.find({}, function(err, places){
     res.send(places)
@@ -76,7 +76,8 @@ app.get('/places', function(req, res){
 app.post('/places', isLoggedIn, function(req,res){
   if(req.user) console.log("****** logged in user!!!")
   console.log("****************** inside post('places') after isLoggedIn Called");
-  // console.log(req.body, req.body.three_things.one, req.body.three_things.two)
+app.post('/places', function(req,res){
+//   // console.log(req.body, req.body.three_things.one, req.body.three_things.two)
   db.Location.create(req.body.location, function(err, location){
     console.log('location created');
     
@@ -108,17 +109,13 @@ app.post('/places', isLoggedIn, function(req,res){
 });
 
 
-
 ///testing ajax 
 app.get('/test', function(req,res){
   db.Location.find({}, function(err, places){
   res.send(places);
+  console.log(places)
   });
 })
-
-
-
-
 
 
 ///Trending////
