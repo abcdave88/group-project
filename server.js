@@ -74,18 +74,12 @@ app.get('/places', function(req, res){
 
 ///posting in the database 
 app.post('/places', isLoggedIn, function(req,res){
-  if(req.user) console.log("****** logged in user!!!")
-  console.log("****************** inside post('places') after isLoggedIn Called");
-app.post('/places', function(req,res){
-//   // console.log(req.body, req.body.three_things.one, req.body.three_things.two)
   db.Location.create(req.body.location, function(err, location){
     console.log('location created');
-    
+  
     db.User.find({_id: req.user.id}, function(err, user) {
       if(err) console.log(err);
-      
-      debugger;
-    
+
       user[0].locations.push(location);
       user[0].save();
     })
