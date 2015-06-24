@@ -19,7 +19,7 @@ var LocationSchema = new Schema ({
   duration_of_visit: String,
   lat: Number,
   lng: Number,
-  three_things: [ThreeThingsSchema]
+  three_things: [ThreeThingsSchema] 
 });
 
 var Location = mongoose.model('Location', LocationSchema);

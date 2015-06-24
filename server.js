@@ -17,7 +17,8 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var LocalStrategy = require('passport-local').Strategy;
 
-require('./public/js/passport.js')(passport);
+
+require('./public/js/passport.js')(app, passport);
 
 app.set('views','./views');
 app.set('view engine', 'ejs');
@@ -32,17 +33,6 @@ app.use(bodyParser());
 app.use(session({ secret: 'SECRET' }));
 app.use(passport.initialize());
 app.use(passport.session());
-
-
-function isLoggedIn(req, res, next) {
-
-   // if user is authenticated in the session, carry on 
-   if (req.isAuthenticated())
-       return next();
-
-   // if they aren't redirect them to the home page
-   res.redirect('/');
-}
 
 
 
@@ -82,11 +72,18 @@ app.get('/places', function(req, res){
   });
 })
 
-app.post('/places', function(req,res){
-  // console.log(req.body, req.body.three_things.one, req.body.three_things.two)
-
+///posting in the database 
+app.post('/places', isLoggedIn, function(req,res){
   db.Location.create(req.body.location, function(err, location){
     console.log('location created');
+  
+    db.User.find({_id: req.user.id}, function(err, user) {
+      if(err) console.log(err);
+
+      user[0].locations.push(location);
+      user[0].save();
+    })
+
     db.ThreeThings.create(req.body.three_things.one, function(err, topThree){
       location.three_things.push(topThree)
     })
@@ -137,3 +134,12 @@ app.get('/test', function(req,res){
 server.listen(port, function(){
   console.log("Server started on http://localhost:" + port);
 })
+
+function isLoggedIn(req, res, next) {
+  // if user is authenticated in the session, carry on 
+  if (req.isAuthenticated())
+      return next();
+
+  // if they aren't redirect them to the home page
+  res.redirect('/');
+}

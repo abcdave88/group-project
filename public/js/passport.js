@@ -1,13 +1,13 @@
 console.log('testing!');
 
 var LocalStrategy = require('passport-local').Strategy;
-var passport = require('passport');
+// var passport = require('passport');
 var bcrypt   = require('bcrypt-nodejs');
 var User = require('../../models.js').User;
 
 
 
-module.exports = function(passport) {
+module.exports = function(app, passport) {
 
    passport.serializeUser(function(user, done) {
        done(null, user.id);
@@ -73,13 +73,6 @@ module.exports = function(passport) {
 
    }));
 
-};
-
-
-
-
-
-
 // THIS IS FOR LOG IN
 
 passport.use('local-login', new LocalStrategy({
@@ -111,8 +104,7 @@ passport.use('local-login', new LocalStrategy({
 
     }));
 
-var isValidPassword = function(user, password){
+  var isValidPassword = function(user, password){
        return bcrypt.compareSync(password, user.password);
    }
-
-// };
+};
