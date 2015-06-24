@@ -58,10 +58,12 @@ function setAutocomplete(){
 function initialize() {
   setAutocomplete();
   console.log(map);
+  // getShow();
 
  
 }
 
 $(document).ready(function(){
   google.maps.event.addDomListener(window, 'load', initialize);
+
 })

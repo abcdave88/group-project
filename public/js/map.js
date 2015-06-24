@@ -67,6 +67,8 @@ function codeAddress(locationData) {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
+
+
 $(document).ready(function(){
 //stores data for create new data
   $(".new-location").on('click', function(e){
