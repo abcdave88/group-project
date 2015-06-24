@@ -105,6 +105,16 @@ app.post('/places', function(req,res){
   });
 });
 
+
+///testing ajax 
+app.get('/test', function(req,res){
+  db.Location.find({}, function(err, places){
+  res.send(places);
+  console.log(places)
+  });
+})
+
+
 ///Trending////
   app.get('/trending', function(req, res){
     // var duplicates = db.ThreeThings.aggregate([
