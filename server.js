@@ -106,7 +106,7 @@ app.post('/places', function(req,res){
 });
 
 
-///testing ajax 
+/// ajax  getting the citty's out of the database
 app.get('/test', function(req,res){
   db.Location.find({}, function(err, places){
   res.send(places);

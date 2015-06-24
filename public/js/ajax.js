@@ -9,13 +9,18 @@ $(document).ready(function(){
     }).done(function(places){
       console.log(places, "done function");
       $.each(places, function(index, place){
-        console.log(place.lat, "our each loop");
+        // console.log(place.lat, "our each loop");
         var city = place.city;
         var lat = place.lat;
         var lng = place.lng;
         var locations = [city, lat, lng];
-        getShow(city, lat, lng);
+        three = place.three_things.forEach(function(e,i){
+          console.log(e.text, e.lat, e.lng);
+          var text = e.text
+          console.log(text)
+        });
 
+        getShow(city, lat, lng);
         function getShow() {
           var infowindow = new google.maps.InfoWindow();
 
@@ -32,4 +37,6 @@ $(document).ready(function(){
       })
     })
 })
+
+
 
