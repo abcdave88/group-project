@@ -41,6 +41,10 @@ function showTrending() {
    $('#trending-pop-out').addClass('animated slideInLeft') ;
 }
 
+function hideWelcomeMessage() {
+   $('#welcome-div').hide();
+}
+
 $('.fa-th-list').on('click', showTrending);
 
 $('.fa-plus').on('click', addTrip);
@@ -56,5 +60,7 @@ $('#login-up-button').on('click', hideLoginMenu);
 $('#sign-up-button').on('click', hideSignUpMenu);
 
 $('.fa-globe').on('click', clearMapThenGetLocation);
+
+$(document).on('click', hideWelcomeMessage);
 
 });
