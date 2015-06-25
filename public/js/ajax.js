@@ -10,7 +10,9 @@ function getLocationInfo(){
   // console.log('this works');
   $.get('/test', function(places){
     // console.log(places);
-    }).done(function(places){
+    }).done(function(user){
+      var user_id = user._id;
+      var places = user.locations;
       // console.log(places, "this is places after .done");
       var locations = [];
       var infowindow = new google.maps.InfoWindow({
@@ -20,7 +22,8 @@ function getLocationInfo(){
       var i;
       $.each(places, function(index, place) {
         // console.log(place, "this is place");
-        var three =  place.city + '' + "<button id='delete-button'>DELETE</button>";
+        var three =  place.city + '' + '<button data-id="' + place._id + '" data-user-id="' + user_id + '" id="delete-button" >DELETE</button>';
+
         
         place.three_things.forEach(function(e,i){
           // console.log('forEach is running');
@@ -50,4 +53,25 @@ function getLocationInfo(){
     google.maps.event.addDomListener(window, 'load', initialize);
     })
 };
+
+function deleteLocation() {
+  console.log("hit");
+  var place_id = $(this).data('id');
+  var user_id = $(this).data('user-id');
+    $.ajax({
+      url: '/users/'+ user_id +'/locations/' + place_id,
+      type: 'DELETE'
+    // console.log('locationId')
+    })
+    // .done(function(response) {
+    //   console.log(response);
+    //   $('#blog-ul').empty();
+    //   Blog.all();
+    // });
+  }
+
+$(document).ready(function(){
+  $('body').on('click','#delete-button', deleteLocation)
+
+});
 
