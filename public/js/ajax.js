@@ -1,6 +1,8 @@
 function clearMapThenGetLocation(){
   console.log("clearMapThenGetLocation")
-  setAllMap(null);
+  for (var i = 0; i < exploreMarkers.length; i++ ) {
+    exploreMarkers[i].setMap(null);
+  }
   getLocationInfo();
 }
 
