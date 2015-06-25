@@ -35,6 +35,13 @@ function contactMenu() {
     console.log('contactMenu');
 }
 
+function showTrending() {
+   console.log('trending menu');
+    
+}
+
+$('.fa-th-list').on('click', showTrending);
+
 $('.fa-plus').on('click', addTrip);
 
 $('.fa-pencil').on('click', contactMenu);

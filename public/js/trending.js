@@ -35,7 +35,6 @@ var items = {};
     var sorted = sortProperties(items);
     var trending = sorted.reverse();
     console.log(trending);
-    // debugger;
   }) 
 
 });//end of document.ready
