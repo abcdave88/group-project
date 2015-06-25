@@ -56,7 +56,7 @@ function codeAddress(locationData) {
     if (status == google.maps.GeocoderStatus.OK) {
       map.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
-          icon: "./assets/images/red-marker.png",
+          icon: "./assets/images/red-marker3.png",
           map: map,
           animation: google.maps.Animation.DROP,
           position: results[0].geometry.location

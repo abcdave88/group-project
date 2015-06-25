@@ -24,6 +24,7 @@ function getLocationInfo(){
       for (i = 0; i < locations.length; i++) {
         marker = new google.maps.Marker({
           position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          icon: "./assets/images/red-marker3.png",
           map: map
         });
         console.log(marker, map);
