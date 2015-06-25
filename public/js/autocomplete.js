@@ -37,6 +37,7 @@ function updateMapBounds(autocomplete){
     var myLatlng = new google.maps.LatLng(lat, lng);
     var marker = new google.maps.Marker({
       position: myLatlng,
+      icon: "./assets/images/yellow-marker.png",
       map: map,
       title: 'Hello World!'
     });
