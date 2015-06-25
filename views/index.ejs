@@ -13,6 +13,7 @@
     <script type="text/javascript" src="js/clickevents.js"></script>
     <script type="text/javascript" src="js/trending.js"></script>
     <script type="text/javascript" src="js/autocomplete.js"></script>
+    <script type="text/javascript" src="js/explore.js"></script>
     <script type="text/javascript" src="js/ajax.js"></script>
     
 
@@ -93,19 +94,19 @@
       </div> <!-- this closes the left-pop-out -->
 
       <div id="login-pop-out">
-        <h2>LOGIN</h2>
-
+        <h3>Welcome back!</h3>
+        <hr class="sign-up-hr">
         <form action="/login" method="post">
         <div class="form-group">
-           <label>Email</label>
+           <label class="registration-fields">EMAIL</label>
            <input type="text" class="form-control" name="email">
         </div>
         <div class="form-group">
-           <label>Password</label>
+           <label class="registration-fields">PASSWORD</label>
            <input type="password" class="form-control" name="password">
         </div>
 
-       <button type="submit" id="login-up-button" class="btn btn-warning btn-lg">Login</button>
+       <button type="submit" id="login-button" class="btn btn-warning btn-lg"><p>LOGIN</p></button>
         </form>
       </div>
 

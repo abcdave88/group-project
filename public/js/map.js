@@ -4,7 +4,7 @@ threeThingsLatLng = [];
 
 function initialize() {
   geocoder = new google.maps.Geocoder();
-  var latlng = new google.maps.LatLng(-34.397, 150.644);
+  var latlng = new google.maps.LatLng(36.7194, 4.4200);
   var mapOptions = {
     zoom: 2,
     minZoom: 2,

@@ -72,7 +72,7 @@ app.get('/users', function(req, res){
   });
 })
 
-app.get('/explore', function(req, res){
+app.get('/locations', function(req, res){
   db.Location.find({}, function(err, locations){
     res.send(locations);
   });

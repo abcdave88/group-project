@@ -41,9 +41,9 @@ html, body, #map-canvas {
   position: absolute;
   float: left;
   z-index: 2;
-  text-align: center;
+  text-align: left;
   display: none;
-  padding-top: 5%;
+  padding: 5% 3%;
 }
 
 #sign-up-pop-out {
@@ -187,7 +187,14 @@ p {
 
 #sign-up-button {
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid rgba(170, 170, 170, 1);
+  color: white;
+  margin-top: 5%;
+}
+
+#login-button {
+  background-color: transparent;
+  border: 1px solid rgba(170, 170, 170, 1);
   color: white;
   margin-top: 5%;
 }

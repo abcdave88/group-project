@@ -1,3 +1,9 @@
+function clearMapThenGetLocation(){
+  console.log("clearMapThenGetLocation")
+  setAllMap(null);
+  getLocationInfo();
+}
+
 function getLocationInfo(){
   // console.log('this works');
   $.get('/test', function(places){

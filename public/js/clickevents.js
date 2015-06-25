@@ -47,4 +47,6 @@ $('#login-up-button').on('click', hideLoginMenu);
 
 $('#sign-up-button').on('click', hideSignUpMenu);
 
+$('.fa-globe').on('click', clearMapThenGetLocation);
+
 });
