@@ -66,9 +66,9 @@ app.get('/logout', function(req, res){
 });
 
 
-app.get('/places', function(req, res){
-  db.Location.find({}, function(err, places){
-    res.send(places)
+app.get('/users', function(req, res){
+  db.User.find({}, function(err, users){
+    res.send(users)
   });
 })
 
@@ -105,10 +105,19 @@ app.post('/places', isLoggedIn, function(req,res){
 
 /// ajax  getting the citty's out of the database
 app.get('/test', function(req,res){
-  db.Location.find({}, function(err, places){
-  res.send(places);
-  console.log(places)
-  });
+  if (req.user) {
+    console.log('if being run')
+    db.User.findById({_id:req.user.id}, function(err, user){
+      console.log(user, "this is after findById");
+      res.send(user.locations);
+    })
+  } else {
+    console.log('else begin run')
+    db.Location.find({}, function(err, places){
+      res.send(places);
+      console.log(places)
+    });
+  }  
 })
 
 
