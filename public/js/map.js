@@ -80,6 +80,7 @@ $(document).ready(function(){
     var form = $(this).prev();
     var locationData = form.serializeArray()
     var mapsData = codeAddress(locationData)
+    form.trigger('reset');
   });
 
 });
