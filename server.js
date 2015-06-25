@@ -72,6 +72,12 @@ app.get('/users', function(req, res){
   });
 })
 
+app.get('/explore', function(req, res){
+  db.Location.find({}, function(err, locations){
+    res.send(locations);
+  });
+})
+
 ///posting in the database 
 app.post('/places', isLoggedIn, function(req,res){
   db.Location.create(req.body.location, function(err, location){

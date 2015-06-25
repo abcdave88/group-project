@@ -12,7 +12,7 @@ function getLocationInfo(){
       var i;
       $.each(places, function(index, place) {
         // console.log(place, "this is place");
-        var three =  place.city + '';
+        var three =  place.city + '' + "<button id='delete-button'>DELETE</button>";
         
         place.three_things.forEach(function(e,i){
           // console.log('forEach is running');
