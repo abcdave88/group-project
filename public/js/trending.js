@@ -31,11 +31,12 @@ var items = {};
      var key = duplicates[i]._id;  
      items[key] = value;
     }
-    // console.log(items);
     var sorted = sortProperties(items);
     var trending = sorted.reverse();
     console.log(trending);
-    // debugger;
+    for (var j = 0; j < 5; j++){
+    $('.append-trends').append("<li class='trending-item'>"+trending[j][0]+", hits: "+trending[j][1]+" </li>");
+    }
   }) 
 
 });//end of document.ready

@@ -240,4 +240,37 @@ p {
  display: none; 
 }
 
+#trending-pop-out{
+  width: 20%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  position: absolute;
+  float: left;
+  z-index: 3;
+  text-align: center;
+  display: none;
+}
+
+#trending-pop-out h3{
+  color: rgba(90, 90, 90, 1);
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-top: 15%;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+#trending-pop-out li{
+  color: rgba(90, 90, 90, 1);
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-top: 15%;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-align: center;
+}
+
 
