@@ -107,9 +107,29 @@ html, body, #map-canvas {
   margin: 0 0 10% 0;
 }
 
+#welcome-div {
+  position: absolute;
+  z-index: 2;
+  text-align: left;
+  padding: 5% 3%;
+  color: white;
+  width: 37%;
+  margin-top: 20%;
+  margin-left: 2%;
+}
+
 .form-control {
   display: block;
   text-align: center;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 100;
+  font-size: 20%;
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px #000;
 }
 
 h2 {
@@ -137,6 +157,15 @@ h4 {
   margin: 0 0;
 }
 
+h5 {
+  color: white;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  margin: 0 0;
+  line-height: 27px;
+}
+
 p {
   color: rgba(90, 90, 90, 1);
   font-size: 13px;
@@ -144,6 +173,11 @@ p {
   font-weight: 300;
   margin: 0 0;
   line-height: 19px;
+}
+
+#bold {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
 }
 
 .registration-fields {
