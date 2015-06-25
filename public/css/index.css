@@ -249,7 +249,21 @@ p {
   font-size: 13px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  margin: 0 0 10% 0;
+  margin-top: 15%;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+#trending-pop-out li{
+  color: rgba(90, 90, 90, 1);
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-top: 15%;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-align: center;
 }
 
 
