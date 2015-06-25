@@ -123,12 +123,6 @@ app.get('/test', function(req,res){
 
 ///Trending////
   app.get('/trending', function(req, res){
-    // var duplicates = db.ThreeThings.aggregate([
-    // {$group : { _id: "$text" , count : { $sum: 1}}},
-    // {$match : { count : { $gt : 1 } }} ]);
-    // db.ThreeThings.find({}, function(err, duplicates){
-    //   res.send(duplicates);
-    // });
     db.ThreeThings.aggregate([
         {$group : { _id: "$text" , count : { $sum: 1}}},
         {$match : { count : { $gt : 1 } }} 

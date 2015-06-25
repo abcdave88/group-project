@@ -37,7 +37,8 @@ function contactMenu() {
 
 function showTrending() {
    console.log('trending menu');
-    
+   $('#trending-pop-out').toggle();
+   $('#trending-pop-out').addClass('animated slideInLeft') ;
 }
 
 $('.fa-th-list').on('click', showTrending);
