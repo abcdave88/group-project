@@ -93,7 +93,10 @@
           
         </form>
         <!-- Taking the button outside form to stop autocomplete events firing submit -->
-        <button class="new-location">submit</button>           
+        <button class="new-location">submit</button> 
+        <div class="arrow-contain">
+          <i class="fa fa-arrow-left"></i> 
+        </div>         
         </div> <!-- this closes the panel div -->
       </div> <!-- this closes the left-pop-out -->
 
@@ -112,6 +115,9 @@
 
        <button type="submit" id="login-button" class="btn btn-warning btn-lg"><p>LOGIN</p></button>
         </form>
+        <div class="arrow-contain-log-in">
+          <i class="fa fa-arrow-left"></i> 
+        </div>  
       </div>
 
       <div id="sign-up-pop-out">
@@ -131,14 +137,19 @@
               <input type="password" class="form-control" name="password">
               <button type="submit" id="sign-up-button" class="btn btn-warning btn-lg"><p>SIGN UP</p></button>
           </form>
+        <div class="arrow-contain-sign-up">
+          <i class="fa fa-arrow-left"></i> 
+        </div>  
       </div>
     </div>
 
     <div id="trending-pop-out">
       <h3>Things Trending</h3>
-      <div class="append-trends">
-      
+      <div class="append-trends"> 
       </div>
+      <div class="arrow-contain-trend">
+        <i class="fa fa-arrow-left"></i> 
+      </div> 
     </div>
     <div id="map-canvas"></div>
 

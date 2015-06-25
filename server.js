@@ -107,7 +107,7 @@ app.get('/test', function(req,res){
     console.log('if being run')
     db.User.findById({_id:req.user.id}, function(err, user){
       console.log(user, "this is after findById");
-      res.send(user.locations);
+      res.send(user);
     })
   } else {
     console.log('else begin run')
@@ -118,6 +118,23 @@ app.get('/test', function(req,res){
   }  
 })
 
+/// ajax delete 
+app.delete("/users/:user_id/locations/:place_id", function (req, res){
+  var LocationId = req.params.place_id;
+  var UserId = req.params.user_id;
+
+
+  db.User.findByIdAndUpdate(
+    UserId,
+   { $pull: { 'locations': {  _id: LocationId } } },function(err,model){
+      if(err){
+        console.log(err);
+        return res.send(err);
+        }
+        // return res.json(model);
+        res.send(204);
+    });
+});
 
 ///Trending////
   app.get('/trending', function(req, res){

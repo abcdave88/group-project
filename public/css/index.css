@@ -307,4 +307,24 @@ p {
   text-align: center;
 }
 
+.arrow-contain {
+  margin-top: 210px;
+  margin-left: 200px;
+}
+.arrow-contain-trend {
+  margin-top: 405px;
+  margin-left: 214px;
+}
+
+.arrow-contain-sign-up{
+  margin-top:315px;
+  margin-left:270px;
+}
+
+.arrow-contain-log-in{
+  margin-top:440px;
+  margin-left:270px;
+}
+
+
 
