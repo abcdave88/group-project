@@ -5,16 +5,20 @@ function getLocationInfo(){
     }).done(function(places){
       // console.log(places, "this is places after .done");
       var locations = [];
-      var infowindow = new google.maps.InfoWindow();
+      var infowindow = new google.maps.InfoWindow({
+        maxWidth: 150,
+        backgroundColor: '#64FE2E'
+      })
       var i;
       $.each(places, function(index, place) {
         // console.log(place, "this is place");
-        var three = '';
+        var three =  place.city + '';
         
         place.three_things.forEach(function(e,i){
           // console.log('forEach is running');
          three += e.text + ' \n'
         });
+        // var city = place.city;
         var lat = place.lat;
         var lng = place.lng;
         var placeInfo = [three, lat, lng];
