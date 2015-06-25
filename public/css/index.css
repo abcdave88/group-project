@@ -90,10 +90,10 @@ html, body, #map-canvas {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid white;
-  color: white;
+  color: rgba(90, 90, 90, 1);
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
-  font-weight: 100;
+  font-weight: 400;
   margin-bottom: 10%;
   width: 80%;
   outline: none;
@@ -194,4 +194,11 @@ p {
 
 .form-group {
   margin-top: 8%;
+}
+
+.new-trip-input {
+  color: rgba(90, 90, 90, 1);
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
 }
