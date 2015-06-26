@@ -6,8 +6,8 @@ html, body, #map-canvas {
 }
 
 #panel {
-  position: absolute;
-  margin: 20% 10%;
+  /*position: absolute;*/
+  /*margin: 20% 10%;*/
   z-index: 5;
   padding: 5px;
 }
@@ -29,14 +29,15 @@ html, body, #map-canvas {
   background-color: rgba(255, 255, 255, 0.85);
   position: absolute;
   float: left;
-  z-index: 3;
+  z-index: 2;
   text-align: center;
   display: none;
+  padding: 5% 3%;
 }
 
 #login-pop-out {
   width: 20%;
-  height: 800px;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.85);
   position: absolute;
   float: left;
@@ -48,7 +49,7 @@ html, body, #map-canvas {
 
 #sign-up-pop-out {
   width: 20%;
-  height: 800px;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.85);
   position: absolute;
   float: left;
@@ -72,7 +73,7 @@ html, body, #map-canvas {
 .new-trip-input {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(140, 140, 140, 1);
   color: white;
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
@@ -83,13 +84,13 @@ html, body, #map-canvas {
 }
 
 #top-three {
-  margin-top: 30%;
+  margin-top: 10%;
 }
 
 .controls {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(140, 140, 140, 1);
   color: rgba(90, 90, 90, 1);
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
@@ -99,14 +100,6 @@ html, body, #map-canvas {
   outline: none;
 }
 
-#left-pop-out h3 {
-  color: rgba(90, 90, 90, 1);
-  font-size: 13px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  margin: 0 0 10% 0;
-}
-
 #welcome-div {
   position: absolute;
   z-index: 2;
@@ -114,7 +107,7 @@ html, body, #map-canvas {
   padding: 5% 3%;
   color: white;
   width: 37%;
-  margin-top: 20%;
+  margin-top: 22%;
   margin-left: 2%;
 }
 
@@ -126,7 +119,7 @@ html, body, #map-canvas {
 h1 {
   font-family: 'Oswald', sans-serif;
   font-weight: 100;
-  font-size: 20%;
+  font-size: 40px;
   color: white;
   letter-spacing: 2px;
   text-shadow: 1px 1px 1px #000;
@@ -166,6 +159,16 @@ h5 {
   line-height: 27px;
 }
 
+h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  color: rgba(215, 30, 66, 1);
+  letter-spacing: 2px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
 p {
   color: rgba(90, 90, 90, 1);
   font-size: 13px;
@@ -178,6 +181,20 @@ p {
 #bold {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
+}
+
+#delete-button {
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid grey;
+  /*margin-left: 5%;*/
+  /*padding-left: 5%;*/
+  /*padding-right: 5%;*/
+  margin-bottom: 8%;
+}
+
+#delete-button:hover h6 {
+  color: rgba(90, 90, 90, 1);
 }
 
 .registration-fields {
@@ -198,9 +215,11 @@ p {
 }
 
 .nav-hr {
-  width: 55%;
-  color: rgba(90, 90, 90, 1);
-  background-color: none;  
+  width: 67%;
+  height: 1px;
+  border: 0;
+  color: rgba(150, 150, 150, 1);  
+  background-color: rgba(150, 150, 150, 1); 
 }
 
 .menu-item {
@@ -210,13 +229,15 @@ p {
 
 .last-menu-item {
   margin-top: 20px;
-  margin-bottom: 95%;
+  margin-bottom: 100%;
 }
 
 .sign-up-hr {
-  color: white;
   width: 75%;
-  /*left: 0px;*/
+  height: 1px;
+  border: 0;
+  color: rgba(150, 150, 150, 1);  
+  background-color: rgba(150, 150, 150, 1); 
 }
 
 #sign-up-button {
@@ -226,10 +247,21 @@ p {
   margin-top: 5%;
 }
 
+#sign-up-button:hover {
+  background-color: rgba(190, 190, 190, 1);
+  margin-top: 5%;
+}
+
 #login-button {
   background-color: transparent;
   border: 1px solid rgba(170, 170, 170, 1);
   color: white;
+  margin-top: 5%;
+  outline: none;
+}
+
+#login-button:hover {
+  background-color: rgba(190, 190, 190, 1);
   margin-top: 5%;
 }
 
@@ -243,7 +275,8 @@ p {
   font-size: 13px;
   font-weight: 400;
 }
-  .logout {
+
+.logout {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 10px;
@@ -255,6 +288,11 @@ p {
   border-top-right-radius: 8px;
   border-bottom-left-radius: 8px;
 }
+
+.logout:hover {
+  background-color: rgba(215, 30, 66, 1);
+}
+
 .btn-sm {
   background-color: rgba(90, 90, 90, 1);
 }
@@ -270,7 +308,7 @@ p {
   display: none;
 }
 
- .profile-photo img {
+.profile-photo img {
  display: none; 
 }
 
@@ -283,17 +321,16 @@ p {
   z-index: 3;
   text-align: center;
   display: none;
+  padding: 5% 3%;
 }
 
 #trending-pop-out h3{
   color: rgba(90, 90, 90, 1);
-  font-size: 13px;
+  font-size: 20px;
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  margin-top: 15%;
-  font-weight: 400;
-  letter-spacing: 2px;
-  text-align: center;
+  font-weight: 100;
+  margin: 0 0;
+  text-align: left;
 }
 
 #trending-pop-out li{
@@ -302,9 +339,9 @@ p {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   margin-top: 15%;
-  letter-spacing: 2px;
   text-decoration: none;
-  text-align: center;
+  text-align: left;
+  list-style-type: none;
 }
 
 .arrow-contain {
@@ -326,5 +363,30 @@ p {
   margin-left:270px;
 }
 
+.trending-item {
+  text-align: left;
+}
 
+.addLocation {
+  margin-top: 5%;
+}
 
+.new-location {
+  background-color: transparent;
+  border: 1px solid rgba(170, 170, 170, 1);
+  color: white;
+  margin-top: 5%;
+}
+
+.new-location:hover {
+  background-color: rgba(190, 190, 190, 1);
+  margin-top: 5%;
+}
+
+#pac-input1 {
+  margin-top: 5%;
+}
+
+input {
+  outline: none;
+}

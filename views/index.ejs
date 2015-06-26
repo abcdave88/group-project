@@ -15,7 +15,6 @@
     <script type="text/javascript" src="js/autocomplete.js"></script>
     <script type="text/javascript" src="js/explore.js"></script>
     <script type="text/javascript" src="js/ajax.js"></script>
-    
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,700italic,500italic,500,400italic,300italic,300,100,100italic,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -30,13 +29,13 @@
     <h5>The Three Thing I Did is a site that lets you track the places you’ve been around the world, along with the three favourite things you did while in that place. You can share your map with friends and family, or view other people’s maps for inspiration on what three things your next trip should include.</h5>
   </div>
     <!-- Menu Butoon -->
-   <div class="button-contain">
+<!--    <div class="button-contain">
     <div class="trigger-button">
       <div class="line1"></div>  
       <div class="line2"></div>  
       <div class="line3"></div>  
     </div>
-  </div>
+  </div> -->
   <!-- Menu Button -->
 
   <div id="side-nav-bar">
@@ -52,7 +51,7 @@
     <hr class="nav-hr">
     <div class="menu-item">
       <i class="fa fa-th-list fa-lg"></i>
-      <h4>Trending</h4>
+      <h4>trending</h4>
     </div>
     <hr class="nav-hr">
     <div class="menu-item">
@@ -78,22 +77,22 @@
       <div id="panel">
           <h3>Trip Details</h3>
         <form class="addLocation">
-          <input name="address" id="address" class="new-trip-input" type="textbox">
+          <input name="address" id="address" class="new-trip-input" type="textbox" placeholder="where did you go?">
          <!--  <input name class="add-pin" type="button" value="add pin"> -->
-          <input name="date" class="new-trip-input" type="textbox" placeholder="date visited">
+          <input name="date" class="new-trip-input" type="textbox" placeholder="when did you go?">
           <input name="stay" class="new-trip-input" type="textbox" placeholder="how long were you there?">
           <div id="top-three">
-            <h3>Enter your three favourite things you did while there</h3>
+            <p>Enter your three favourite things you did while there</p>
             <input name="top1" id="pac-input1" class="controls" type="text" placeholder="1.">
             <input name="top2" id="pac-input2" class="controls" type="text" placeholder="2.">
             <input name="top3" id="pac-input3" class="controls" type="text" placeholder="3.">
-          <div id="type-selector" class="controls">
+          <div id="type-selector">
         </div>
           </div> 
           
         </form>
         <!-- Taking the button outside form to stop autocomplete events firing submit -->
-        <button class="new-location">submit</button> 
+        <button class="new-location"><p>SUBMIT</p></button> 
         <div class="arrow-contain">
           <i class="fa fa-arrow-left"></i> 
         </div>         
@@ -145,6 +144,7 @@
 
     <div id="trending-pop-out">
       <h3>Things Trending</h3>
+      <hr class="sign-up-hr">
       <div class="append-trends"> 
       </div>
       <div class="arrow-contain-trend">

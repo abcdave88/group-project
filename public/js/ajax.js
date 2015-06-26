@@ -16,18 +16,18 @@ function getLocationInfo(){
       // console.log(places, "this is places after .done");
       var locations = [];
       var infowindow = new google.maps.InfoWindow({
-        maxWidth: 150,
+        maxWidth: 250,
         backgroundColor: '#64FE2E'
       })
       var i;
       $.each(places, function(index, place) {
         // console.log(place, "this is place");
-        var three =  place.city + '' + '<button data-id="' + place._id + '" data-user-id="' + user_id + '" id="delete-button" >DELETE</button>';
+        var three =  place.city + '       ' + '<button data-id="' + place._id + '" data-user-id="' + user_id + '" id="delete-button"><h6>DELETE</h6></button>' + "<br>";
 
         
         place.three_things.forEach(function(e,i){
           // console.log('forEach is running');
-         three += e.text + ' \n'
+         three += e.text + '<br>'
         });
         // var city = place.city;
         var lat = place.lat;
@@ -43,7 +43,7 @@ function getLocationInfo(){
           map: map
         });
         console.log(marker, map);
-        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        google.maps.event.addListener(marker, "click", (function(marker, i) {
           return function() {
             infowindow.setContent(locations[i][0]);
             infowindow.open(map, marker);
