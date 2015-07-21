@@ -1,14 +1,7 @@
 var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
- // mongoose.connect('http://some-heroku-url.whatever');
-
- mongo.connect(process.env.MONGOLAB_URI, {}, function(error, db){
-
-  // console.log will write to the heroku log which can be accessed via the 
-  // command line as "heroku logs"
-  db.addListener("error", function(error){
-    console.log("Error connecting to MongoLab");
-  });
+var db_url = process.env.MONGOLAB_URI || 'mongodb://localhost/threethingsdatabase'
+mongoose.connect(db_url);
 
 var Schema = mongoose.Schema;
 
