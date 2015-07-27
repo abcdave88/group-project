@@ -34,7 +34,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-
 app.get('/', function(req, res){
   res.render('index');
 })
