@@ -55,8 +55,8 @@ function codeAddress(locationData) {
   geocoder.geocode( { 'address': address}, function(results, status) {
     console.log(results)
    place = results[0].formatted_address
-   lat = results[0].geometry.location.A
-   lng = results[0].geometry.location.F
+   lat = results[0].geometry.location.G
+   lng = results[0].geometry.location.K
     if (status == google.maps.GeocoderStatus.OK) {
       map.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({

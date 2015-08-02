@@ -14,8 +14,8 @@ function updateMapBounds(autocomplete){
     // marker.setVisible(false);
     var place = autocomplete.getPlace();
     console.log(place)
-    var A = place.geometry.location.A
-    var F = place.geometry.location.F
+    var A = place.geometry.location.G
+    var F = place.geometry.location.K
 
     if (!place.geometry) {
       window.alert("Autocomplete's returned place contains no geometry");

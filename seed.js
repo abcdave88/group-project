@@ -7,6 +7,7 @@ repl.context.db = db;
 db.User.collection.remove();
 db.Location.collection.remove();
 db.ThreeThings.collection.remove();
+console.log('helo')
 
 // db.User.create({
 //   name: 'User One',
@@ -40,3 +41,5 @@ db.ThreeThings.collection.remove();
 
  // blog.comments.push(comment);
  //     blog.save()
+
+ process.exit();
